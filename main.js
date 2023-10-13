@@ -19,7 +19,6 @@ function addBookList() {
     const bookTitle = document.querySelector("#judulBuku");
     const authorName = document.querySelector("#namaPengarang");
     const publicationYear = document.querySelector("#tahunTerbit");
-    const bookIsComplete = document.querySelector("#inputBookIsComplete");
 
     const bookObject = {
         id: +new Date,
@@ -174,6 +173,9 @@ function loadSavedData() {
 
     if(savedBookList) {
         bookList = JSON.parse(savedBookList);
+        for (const bookItem of bookList) {
+            bookItem.year = parseInt(bookItem.year);
+        }
         renderBookList();
     }
 }
