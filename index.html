@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="image/book.png" type="image/x-icon">
+    <title>Bookshelf</title>
+</head>
+<body>
+    <header class="head">
+        <img src="image/open-book.png" alt="book-logo">
+        <h1>Bookshelf Note</h1>
+    </header>
+
+    <main>
+        <section class="input-area">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputDataBuku">
+                <div class="inputBuku">
+                    <label for="judulBuku">Judul Buku</label>
+                    <input type="text" name="judulBuku" id="judulBuku" required>
+                </div>
+                <div class="inputBuku">
+                    <label for="namaPengarang">Penulis Buku</label>
+                    <input type="text" name="namaPengarang" id="namaPengarang" required>
+                </div>
+                <div class="inputBuku">
+                    <label for="tahunTerbit">Tahun Terbit</label>
+                    <input type="number" name="tahunTerbit" id="tahunTerbit" required>
+                </div>
+                <input type="submit" value="Masukkan Buku ke Rak" id="submitButton">
+            </form>
+        </section>
+
+        <section class="search-bar">
+            <div class="search-header">
+                <h2>Cari Buku</h2>
+                <p>Cari Berdasarkan Judul Buku</p>
+            </div>
+            <form id="searchBook">
+                <input type="text" name="searchBook" id="searchBookByTitle">
+                <button id="searchSubmit" type="submit"><img src="image/lup-white.png" alt="lup"></button>
+            </form>
+        </section>
+
+        <section class="rak-buku">
+            <div class="rak-title">
+                <h2>Belum Selesai Dibaca</h2>
+            </div>
+            <div id="incompleteList" class="rak-buku-container"></div>
+        </section>
+
+        <section class="rak-buku">
+            <div class="rak-title">
+                <h2>Selesai Dibaca</h2>
+            </div>
+            <div id="completeList" class="rak-buku-container"></div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --color-white: #ffffff;
+    --color-blue: #202248;
+    --color-baby-blue: #376593;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-white);
+}
+
+.head {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.head img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+main {
+    max-width: 900px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.input-area, .search-bar, .rak-buku {
+    padding: 1.5rem;
+    border: 2px solid var(--color-baby-blue);
+    border-radius: 10px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.rak-buku {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar, .rak-buku {
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--color-blue);
+    text-align: center;
+}
+
+.input-area h2, .rak-buku h2 {
+    margin: 0 auto;
+}
+
+.inputBuku {
+    margin: 1.5rem 0;
+}
+
+.inputBuku label {
+    font-size: 1.5rem;
+    color: var(--color-blue);
+    font-weight: 600;
+}
+
+.inputBuku input{
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--color-baby-blue);
+    border-radius: 4px;
+}
+
+.inputBuku input[type="text"], .inputBuku input[type="number"] {
+    font: 500 1.5rem 'Montserrat', sans-serif;
+    color: var(--color-blue);
+}
+
+#submitButton {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: var(--color-baby-blue);
+}
+
+.clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.clear label {
+    color: var(--color-blue);
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-right: 1.3rem;
+}
+
+.clear input[type="checkbox"] {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    accent-color: var(--color-blue);
+}
+
+.search-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.search-header p {
+    color: var(--color-baby-blue);
+}
+
+#searchSubmit img {
+    width: 30%;
+}
+
+#searchSubmit {
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
+    width: 10%;
+    cursor: pointer;
+}
+
+#searchSubmit:hover {
+    background-color: var(--color-baby-blue);
+}
+
+#searchBookByTitle {
+    width: 85%;
+    padding: 1rem;
+    border: 2px solid var(--color-baby-blue);
+    border-radius: 5px;
+}
+
+#searchBook input[type="text"] {
+    font: 500 1.5rem 'Montserrat', sans-serif;
+    color: var(--color-blue);
+}
+
+#searchBook {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.book-item {
+    border: 1.2px solid var(--color-blue);
+    border-radius: 4px;
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.text-item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-blue);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-baby-blue);
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: var(--color-white);
+    padding: 6px;
+    font: inherit;
+    font-size: 1.3rem;
+}
+
+.btn:hover {
+    background-color: var(--color-blue);
+}
+
+.rak-title {
+    margin-bottom: 1.5rem;
+}
+
+.rak-buku-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    #submitButton {
+        font-size: 1rem;
+    }
+
+    #searchBookByTitle {
+        width: 75%;
+        padding: 0.7rem;
+    }
+
+    #searchSubmit{
+        width: 20%;
+    }
+
+    #searchSubmit img {
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .head img {
+        width: 40px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    #submitButton {
+        width: 80%;
+    }
+}
