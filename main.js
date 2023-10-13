@@ -24,7 +24,7 @@ function addBookList() {
         id: +new Date,
         title: bookTitle.value,
         author: authorName.value,
-        year: publicationYear.value,
+        year: parseInt(publicationYear.value),
         isComplete: false,
     };
     bookList.push(bookObject);
